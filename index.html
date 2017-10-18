@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>.:Examen 2:.</title>
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 400px;
+}
+
+td{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+</style>
+</head>
+<body>
+	<form>
+		<div class="titulo">
+			<h1>Examen 2</h1>
+		</div>
+		<div class="menu">
+			<table ">
+				<tr>
+					<td>(939, 17)</td>
+					<td><input type="radio" name="uno" value="primera" onclick="prime()"></td>
+				</tr>
+				<tr>
+					<td>(939, 26)</td>
+					<td><input type="radio" name="uno" value="segunda" onclick="segu()"></td>
+				</tr>
+				<tr>
+					<td>(939, 29)</td>
+					<td><input type="radio" name="uno" value="tercera" onclick="terce()"></td>
+				</tr>
+			</table>
+			<br>
+			<p id="mcd" style="font-size: 25px;"></p>
+		</div>
+	</form>
+</body>
+<script >
+	function prime() {
+
+    var x=939;
+    var y=17;
+    var aux;
+    var resto=true;
+    while (resto){
+    	if (x < y) {
+    		aux = y;
+    		x = y;
+    		y = aux;
+    	}else if(x == y ){
+    		document.getElementById("mcd").innerHTML = y;
+    		resto = false;
+    	}else{
+    		var c = Math.floor(x/y);
+    		var r = x % y;
+    		if (r == 0) {
+    			document.getElementById("mcd").innerHTML = "mcd: "+ y;
+    			resto = false;
+    		}else{
+    			x = y;
+    			y = r;
+    		}
+    	}
+    }
+    
+//document.getElementById("mcd").innerHTML = y;
+}
+function segu() {
+
+    var x=939;
+    var y=26;
+    var aux;
+    var resto=true;
+    while (resto){
+    	if (x < y) {
+    		aux = y;
+    		x = y;
+    		y = aux;
+    	}else if(x == y ){
+    		document.getElementById("mcd").innerHTML = y;
+    		resto = false;
+    	}else{
+    		var c = Math.floor(x/y);
+    		var r = x % y;
+    		if (r == 0) {
+    			document.getElementById("mcd").innerHTML = "mcd: "+ y;
+    			resto = false;
+    		}else{
+    			x = y;
+    			y = r;
+    		}
+    	}
+    }
+    
+//document.getElementById("mcd").innerHTML = y;
+}
+function terce() {
+
+    var x=939;
+    var y=29;
+    var aux;
+    var resto=true;
+    while (resto){
+    	if (x < y) {
+    		aux = y;
+    		x = y;
+    		y = aux;
+    	}else if(x == y ){
+    		document.getElementById("mcd").innerHTML = y;
+    		resto = false;
+    	}else{
+    		var c = Math.floor(x/y);
+    		var r = x % y;
+    		if (r == 0) {
+    			document.getElementById("mcd").innerHTML = "mcd: "+ y;
+    			resto = false;
+    		}else{
+    			x = y;
+    			y = r;
+    		}
+    	}
+    }
+    
+//document.getElementById("mcd").innerHTML = y;
+}
+</script>
+</html>
